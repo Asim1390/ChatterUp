@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-const baseUrl = process.env.MONGODB || '0.0.0.0:27017';
+const baseUrl = "mongodb+srv://asimswar:asimswar@cluster0.yikjw1w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 export const connectToDatabase = async () => {
     try {
-        await mongoose.connect(`mongodb://${baseUrl}/book` , {
+        await mongoose.connect(baseUrl  , {
            useNewUrlParser: true,
            useUnifiedTopology: true
        });
